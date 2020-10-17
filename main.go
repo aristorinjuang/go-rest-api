@@ -50,7 +50,8 @@ func read(res http.ResponseWriter, req *http.Request) {
 		log.Fatal(err)
 	}
 
-	if articles[articleID].Title == "" && articles[articleID].Description == "" {
+	if articles[articleID].Title == "" &&
+		articles[articleID].Description == "" {
 		res.WriteHeader(http.StatusNotFound)
 		return
 	}
@@ -71,7 +72,8 @@ func replace(res http.ResponseWriter, req *http.Request) {
 		log.Fatal(err)
 	}
 
-	if articles[articleID].Title == "" && articles[articleID].Description == "" {
+	if articles[articleID].Title == "" &&
+		articles[articleID].Description == "" {
 		res.WriteHeader(http.StatusNotFound)
 		return
 	}
@@ -98,7 +100,8 @@ func modify(res http.ResponseWriter, req *http.Request) {
 		log.Fatal(err)
 	}
 
-	if articles[articleID].Title == "" && articles[articleID].Description == "" {
+	if articles[articleID].Title == "" &&
+		articles[articleID].Description == "" {
 		res.WriteHeader(http.StatusNotFound)
 		return
 	}
@@ -139,7 +142,8 @@ func remove(res http.ResponseWriter, req *http.Request) {
 		log.Fatal(err)
 	}
 
-	if articles[articleID].Title == "" && articles[articleID].Description == "" {
+	if articles[articleID].Title == "" &&
+		articles[articleID].Description == "" {
 		res.WriteHeader(http.StatusNotFound)
 		return
 	}
